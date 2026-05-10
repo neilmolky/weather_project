@@ -1,6 +1,6 @@
 # This workflow will install Python dependencies, run tests and lint with uv
 
-name: test-all-branches
+name: all-branch-protection
 
 on:
   push:
@@ -23,4 +23,4 @@ jobs:
         run: uv sync --locked --all-extras --dev
 
       - name: Run tests
-        run: uv run main.py # TODO: implement tests
+        run: uv run pytest

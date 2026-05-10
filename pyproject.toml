@@ -3,5 +3,18 @@ name = "weather-project"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "neilmolky", email = "neilmolky@zoho.com" }
+]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.136.1",
+    "pytest>=9.0.3",
+]
+
+[project.scripts]
+weather-project = "weather_project:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
